@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="NewFilter1">
+      <UniqueIdentifier>{82172127-cbdb-47fe-8120-bcffbb02da9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P3D">
+      <UniqueIdentifier>{cf2997bc-fab3-4d3f-b2f8-50b3c285cccd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P3D\Header">
+      <UniqueIdentifier>{a048211a-80cc-41df-85c0-aa533f54b9ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="P3D\Source">
+      <UniqueIdentifier>{32344451-db7f-472f-98c3-bf551caa4777}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\P3DEngine\include\GL_Fbo.h">
+      <Filter>P3D\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\P3DEngine\include\P3D_BaseType.h">
+      <Filter>P3D\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\P3DEngine\include\P3D_Camera.h">
+      <Filter>P3D\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\P3DEngine\include\P3D_kdTree.h">
+      <Filter>P3D\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\P3DEngine\include\P3D_Math.h">
+      <Filter>P3D\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\P3DEngine\include\P3D_Renderable.h">
+      <Filter>P3D\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\P3DEngine\include\P3D_RenderScene.h">
+      <Filter>P3D\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\P3DEngine\include\P3D_Shader.h">
+      <Filter>P3D\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\P3DEngine\include\P3D_ViewPort.h">
+      <Filter>P3D\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\P3DEngine\include\P3D_util.h">
+      <Filter>P3D\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\P3DEngine\include\P3D_Texture.h">
+      <Filter>P3D\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\P3DEngine\include\P3D_Contex.h">
+      <Filter>P3D\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\P3DEngine\include\P3D_Input.h">
+      <Filter>P3D\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\P3DEngine\Source\P3D_Input.cpp">
+      <Filter>P3D\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\P3DEngine\include\P3D_GLFrame.h">
+      <Filter>P3D\Header</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\P3DEngine\Source\GL_Fbo.cpp">
+      <Filter>P3D\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\P3DEngine\Source\P3D_Camera.cpp">
+      <Filter>P3D\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\P3DEngine\Source\P3D_BaseType.cpp">
+      <Filter>P3D\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\P3DEngine\Source\P3D_kdTree.cpp">
+      <Filter>P3D\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\P3DEngine\Source\P3D_RenderScene.cpp">
+      <Filter>P3D\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\P3DEngine\Source\P3D_Shader.cpp">
+      <Filter>P3D\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\P3DEngine\Source\P3D_Renderable.cpp">
+      <Filter>P3D\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\P3DEngine\Source\P3D_Math.cpp">
+      <Filter>P3D\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\P3DEngine\Source\P3D_ViewPort.cpp">
+      <Filter>P3D\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\P3DEngine\Source\P3D_util.cpp">
+      <Filter>P3D\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\P3DEngine\Source\P3D_Texture.cpp">
+      <Filter>P3D\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\P3DEngine\Source\P3D_PathTracer.cpp">
+      <Filter>P3D\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\P3DEngine\Source\P3D_Context.cpp">
+      <Filter>P3D\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\P3DEngine\Source\P3D_GLFrame.cpp">
+      <Filter>P3D\Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
