@@ -31,10 +31,10 @@ P3DMaterial& P3DMaterial::operator = (P3DMaterial& tmpM){
 	this->m_Refra = tmpM.m_Refra;
 	return *this;
 }
-bool P3DMaterial::LoadTexture(GLenum TexType, std::string& filename){
+bool P3DMaterial::LoadTexture(uint TexType, std::string& filename){
 	SAFERELEASE(m_PTexture);
-	m_PTexture = new P3DTexture();
-	return m_PTexture->Load(TexType, filename);
+	m_PTexture = P3DTexTureMan::Instance().LoadTexture2D(filename).get();
+	return true;
 }
 
 P3DAABB Triangle::getAABB(){

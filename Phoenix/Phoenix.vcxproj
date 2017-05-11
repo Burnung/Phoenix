@@ -152,6 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\P3DEngine\include\GL_Fbo.h" />
+    <ClInclude Include="..\P3DEngine\include\P3DRenderEngine.h" />
     <ClInclude Include="..\P3DEngine\include\P3D_GLFrame.h" />
     <ClInclude Include="..\P3DEngine\include\P3D_Input.h" />
     <ClInclude Include="..\P3DEngine\include\P3D_Contex.h" />
@@ -165,6 +166,7 @@
     <ClInclude Include="..\P3DEngine\include\P3D_Shader.h" />
     <ClInclude Include="..\P3DEngine\include\P3D_util.h" />
     <ClInclude Include="..\P3DEngine\include\P3D_ViewPort.h" />
+    <ClInclude Include="..\P3DEngine\include\RenderLayout.h" />
     <ClInclude Include="..\P3DEngine\Source\P3D_Input.cpp" />
   </ItemGroup>
   <ItemGroup>

@@ -63,11 +63,11 @@ bool P3DLitModelRenderable::LoadFromFile(std::string &filename, bool kdTree){
 }
 
 bool P3DLitModelRenderable::InitFromScene(const aiScene* m_Scene,std::string &filename){
-	m_Entities.resize(m_Scene->mNumMeshes);
+	m_Meshes.resize(m_Scene->mNumMeshes);
 	m_Materials.resize(m_Scene->mNumMaterials);
 	for (int i = 0; i < m_Materials.size(); i++)
 		m_Materials[i] = new P3DMaterial;
-	for (int i = 0; i < m_Entities.size();i++){
+	for (int i = 0; i < m_Meshes.size();i++){
 		const aiMesh* m_aiMesh = m_Scene->mMeshes[i];
 		InitEntity(i, m_aiMesh);
 	}
@@ -122,8 +122,10 @@ bool P3DLitModelRenderable::InitMaterials(const aiScene *m_Scene, std::string &F
 	return Ret;
 }
 
-bool P3DLitModelRenderable::InitEntity(int index, const aiMesh* m_mesh){
-	m_Entities[index].MaterialIndex = m_mesh->mMaterialIndex;
+bool P3DLitModelRenderable::InitEntity(int index, const aiMesh* m_mesh) {
+	P3DMesh *pMesh =  new P3DMesh(m_mesh->mNumVertices, m_mesh->mNumFaces * 3);
+	m_Meshes[index] = pMesh;
+	pMesh->m_MatIndex = m_mesh->mMaterialIndex;
 	std::vector<Vertex> m_Vertex(m_mesh->mNumVertices);
 	std::vector<unsigned int> m_Indices(m_mesh->mNumFaces*3);
 	for (int i = 0; i < m_mesh->mNumVertices; i++){
@@ -135,14 +137,14 @@ bool P3DLitModelRenderable::InitEntity(int index, const aiMesh* m_mesh){
 		 }
 		 else
 			 tmpUv = glm::vec2(0, 0);
-		 m_Vertex[i] = Vertex(tmpPos+getPos(), tmpNormal, tmpUv);
+		 pMesh->m_vertex[i] = Vertex(tmpPos+getPos(), tmpNormal, tmpUv);
 	}
 	for (int i = 0; i < m_mesh->mNumFaces; i++) {
 		const aiFace& Face = m_mesh->mFaces[i];
 		assert(Face.mNumIndices == 3);
-		m_Indices[i * 3] = Face.mIndices[0];
-		m_Indices[i * 3 + 1] = Face.mIndices[1];
-		m_Indices[i * 3 + 2] = Face.mIndices[2];
+		pMesh->m_index[i * 3] = Face.mIndices[0];
+		pMesh->m_index[i * 3 + 1] = Face.mIndices[1];
+		pMesh->m_index[i * 3 + 2] = Face.mIndices[2];
 		if (IskdTree){
 			Triangle *TmpTri = new Triangle();
 			TmpTri->m_p1 = m_Vertex[Face.mIndices[0]];
@@ -158,7 +160,6 @@ bool P3DLitModelRenderable::InitEntity(int index, const aiMesh* m_mesh){
 
 	//m_Entities[index].Init(m_Vertex, m_Indices);
 
-	m_Entities[index].NumIndices = m_Indices.size();
 	GLuint VB, VA;
 	glGenBuffers(1, &VB);
 	glGenBuffers(1, &(m_Entities[index].Ib));

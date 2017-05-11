@@ -47,6 +47,23 @@ private:
 	
 };
 
+class P3DMesh {
+public:
+	P3DMesh(int nVertex, int nIndex) {
+		m_index.resize(nVertex);
+		m_vertex.resize(nVertex);
+	}
+	~P3DMesh() {
+		m_index.clear();
+		m_vertex.clear();
+	}
+	std::vector<uint> m_index;
+	std::vector<Vertex> m_vertex;
+
+	P3DAABB m_AABB;
+	int m_MatIndex;
+};
+
 class P3DLitModelRenderable :public  P3DRenderable{
 public:
 	P3DLitModelRenderable();
@@ -56,26 +73,11 @@ public:
 	virtual bool InterSect(P3DRay &ray, P3DObjIntersection &intersection, float &dmin);
 	void SetMaterial(P3DMaterial &Tmat);
 	std::vector<Triangle*> & GetTris() { return m_Triangles; };
-	struct ModelEntity{
-
-		GLuint Vb, Ib;
-		GLuint VAO;
-
-		int NumIndices;
-
-		ModelEntity();
-		~ModelEntity(){};
-		//void Init(const std::vector<Vertex>&, const std::vector < unsigned int>&);
-
-		unsigned int index;
-		unsigned int MaterialIndex;
-	};
 
 private:
 	std::vector<P3DMaterial*> m_Materials;
-	std::vector<ModelEntity> m_Entities;
+	std::vector< P3DMesh*> m_Meshes;
 	std::vector<Triangle*> m_Triangles;
-	P3DMaterial *m_WholeMaterial;
 
 	void Clear();
 	bool InitFromScene(const aiScene *m_Scene,std::string &filename);

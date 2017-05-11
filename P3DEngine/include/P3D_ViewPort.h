@@ -33,10 +33,8 @@ public:
 	glm::mat4 GetViewMat();
 	glm::mat4 GetProViewMat();
 
-
-
 private:
-	P3DCamera *m_Camera;
+	P3DCameraPtr *m_CameraPtr;
 	int m_Width, m_Height;
 	float m_Nearest, m_Farthest;
 	float m_Fovy;

@@ -72,6 +72,12 @@
     <ClInclude Include="..\P3DEngine\include\P3D_GLFrame.h">
       <Filter>P3D\Header</Filter>
     </ClInclude>
+    <ClInclude Include="..\P3DEngine\include\P3DRenderEngine.h">
+      <Filter>P3D\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\P3DEngine\include\RenderLayout.h">
+      <Filter>P3D\Header</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\P3DEngine\Source\GL_Fbo.cpp">

@@ -78,16 +78,16 @@ struct Triangle{
 	bool Intersect(P3DRay &ray, float &Dis,float mindis,float &u,float &v);
 	void ComVertex(float u, float v, Vertex &ret);//����λ�ü����������е��ķ��� uv������
 };
-class P3DTexture;
+class P3DTexture2D;
 class P3DMaterial{
 public:
 	RenderType m_RenderType;
 	MaterialType m_MaterialType;
-	float m_Refra;  //������  ���ڵ���1
+	float m_Refra;  
 	glm::vec3 m_colour;
 	glm::vec3 m_emission;
 
-	P3DTexture *m_PTexture;
+	P3DTexture2D *m_PTexture;
 	P3DMaterial(MaterialType MatType = DIFF, RenderType renType = TEXTURE_TYPE);
 	P3DMaterial(glm::vec3 &emmision, glm::vec3 &color, MaterialType MatType = DIFF, RenderType renType = TEXTURE_TYPE);
 	P3DMaterial(P3DMaterial&);

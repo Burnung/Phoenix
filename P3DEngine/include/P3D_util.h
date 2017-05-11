@@ -3,8 +3,10 @@
 #include <time.h>
 #include <memory>
 typedef unsigned char       BYTE;
+typedef unsigned int        uint;
+
 const float PI = 3.1415926;
-//����������
+
 #define P3D_DECLARE_SINGLETON(CLASS_NAME)  \
 	private:\
 	CLASS_NAME(); \
@@ -12,7 +14,7 @@ const float PI = 3.1415926;
 	CLASS_NAME& operator= (const CLASS_NAME&);    \
 	public:\
 	static CLASS_NAME &Instance()
-//���嵥����
+
 #define P3D_DEFINE_SINGLETON(CLASS_NAME)   \
 	CLASS_NAME::CLASS_NAME() {};  \
 	CLASS_NAME & CLASS_NAME::Instance(){\
