@@ -68,15 +68,15 @@ struct P3DSphereBox{
 };
 
 struct Triangle{
-	Vertex m_p1, m_p2, m_p3;   //��˳����������
-	glm::vec3 m_Normal;        //�����εķ���
-	P3DMaterial *m_PMaterial;    //����ָ��
+	Vertex m_p1, m_p2, m_p3;   //
+	glm::vec3 m_Normal;        //
+	P3DMaterial *m_PMaterial;    //
 	int m_id;
 	P3DAABB getAABB();
 	glm::vec3 getMidPoint();
 	void ComputeNormal();
 	bool Intersect(P3DRay &ray, float &Dis,float mindis,float &u,float &v);
-	void ComVertex(float u, float v, Vertex &ret);//����λ�ü����������е��ķ��� uv������
+	void ComVertex(float u, float v, Vertex &ret);//
 };
 class P3DTexture2D;
 class P3DMaterial{

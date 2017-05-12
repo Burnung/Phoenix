@@ -153,6 +153,7 @@
   <ItemGroup>
     <ClInclude Include="..\P3DEngine\include\GL_Fbo.h" />
     <ClInclude Include="..\P3DEngine\include\P3DRenderEngine.h" />
+    <ClInclude Include="..\P3DEngine\include\P3D_Terrain.h" />
     <ClInclude Include="..\P3DEngine\include\P3D_GLFrame.h" />
     <ClInclude Include="..\P3DEngine\include\P3D_Input.h" />
     <ClInclude Include="..\P3DEngine\include\P3D_Contex.h" />
@@ -179,6 +180,7 @@
     <ClCompile Include="..\P3DEngine\Source\P3D_PathTracer.cpp" />
     <ClCompile Include="..\P3DEngine\Source\P3D_RenderScene.cpp" />
     <ClCompile Include="..\P3DEngine\Source\P3D_Shader.cpp" />
+    <ClCompile Include="..\P3DEngine\Source\P3D_Terrain.cpp" />
     <ClCompile Include="..\P3DEngine\Source\P3D_Texture.cpp" />
     <ClCompile Include="..\P3DEngine\Source\P3D_util.cpp" />
     <ClCompile Include="..\P3DEngine\Source\P3D_Renderable.cpp" />

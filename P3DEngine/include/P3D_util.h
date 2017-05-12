@@ -2,9 +2,14 @@
 #include<fstream>
 #include <time.h>
 #include <memory>
+#include <glm\glm.hpp>
+/**************************定义数据类型**********************/
 typedef unsigned char       BYTE;
-typedef unsigned int        uint;
-
+typedef unsigned int        uint;  //32 位
+typedef glm::ivec2 Size2i;
+typedef unsigned int      t_Size;
+typedef unsigned short   ushort;  // 16位
+/************************************************************/
 const float PI = 3.1415926;
 
 #define P3D_DECLARE_SINGLETON(CLASS_NAME)  \
@@ -83,4 +88,21 @@ void PHO_Clamp(T Tmin, T Tmax, T& var){
 	else if (var > Tmax)
 		var = Tmax;
 }
+/***********************typedef Ptr***************************************/
+class P3DTerrainBlock;
+typedef std::shared_ptr<P3DTerrainBlock> P3DTerrainBlockPtr;
 
+class P3DTerrain;
+typedef std::shared_ptr<P3DTerrain> P3DTerrainPtr;
+
+class P3DTexture2D;
+typedef std::shared_ptr<P3DTexture2D> P3DTexture2DPtr;
+
+class P3DTerrainRender;
+typedef std::shared_ptr<P3DTerrainRender> P3DOGLTerrainRender;
+
+class P3DTerrainRenderable;
+typedef std::shared_ptr<P3DTerrainRenderable> P3DTerrainRenderablePtr;
+
+class P3DViewPort;
+typedef std::shared_ptr< P3DViewPort> P3DViewPortPtr;

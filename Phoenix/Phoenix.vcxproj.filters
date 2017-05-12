@@ -78,6 +78,9 @@
     <ClInclude Include="..\P3DEngine\include\RenderLayout.h">
       <Filter>P3D\Header</Filter>
     </ClInclude>
+    <ClInclude Include="..\P3DEngine\include\P3D_Terrain.h">
+      <Filter>P3D\Header</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\P3DEngine\Source\GL_Fbo.cpp">
@@ -123,6 +126,9 @@
       <Filter>P3D\Source</Filter>
     </ClCompile>
     <ClCompile Include="..\P3DEngine\Source\P3D_GLFrame.cpp">
+      <Filter>P3D\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\P3DEngine\Source\P3D_Terrain.cpp">
       <Filter>P3D\Source</Filter>
     </ClCompile>
   </ItemGroup>

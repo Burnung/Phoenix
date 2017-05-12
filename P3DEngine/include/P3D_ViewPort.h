@@ -46,7 +46,7 @@ private:
 	glm::mat4 m_ProViewMat;
 
 };
-typedef std::shared_ptr< P3DViewPort> P3DViewPortPtr;
+
 
 
 

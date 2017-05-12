@@ -1,6 +1,6 @@
 #include "P3D_GLFrame.h"
 
-class myApp :public GL_CallBack, public P3DApp {
+class myApp : public P3DApp {
 public :
 
 };
